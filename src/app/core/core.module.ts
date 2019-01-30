@@ -14,8 +14,8 @@ import {throwIfAlreadyLoaded} from './module-import-guard';
   declarations: [],
   providers: [
     { provide: LoggerService, useClass: PlainLoggerService },
-    // DataService,
-    { provide: DataService, useFactory: dataServiceFactory, deps: [ LoggerService ] }
+    DataService,
+    // { provide: DataService, useFactory: dataServiceFactory, deps: [ LoggerService ] }
   ]
 })
 export class CoreModule {
